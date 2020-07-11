@@ -1,0 +1,42 @@
+{
+    "name": "ochi51/separator-excel",
+    "description": "Separate excel with images for cli-kintone",
+    "type": "library",
+    "keywords": ["Excel", "Kintone"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yuichi Ochiai",
+            "email": "ochiai97@gmail.com",
+            "role": "lead"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "phpoffice/phpspreadsheet": "^1.13",
+        "symfony/console": "^5.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ochi51\\SeparatorExcel\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/"
+        ],
+        "psr-4": {
+            "Ochi51\\SeparatorExcel\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "bin": [
+        "bin/separator-excel"
+    ]
+}

@@ -1,0 +1,12 @@
+!/_output/.gitignore
+/_output
+/cli-kintone
+/composer.lock
+!/tests/_output/.gitkeep
+/tests/_output
+/.phpunit.result.cache
+/vendor
+
+# Editor
+/.idea
+/.DS_Store
