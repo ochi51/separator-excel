@@ -6,6 +6,7 @@
 /tests/_output
 /.phpunit.result.cache
 /vendor
+/coverage.clover
 
 # Editor
 /.idea
