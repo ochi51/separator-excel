@@ -20,8 +20,8 @@ class ImageDrawingTest extends TestCase
             ->willReturn(MemoryDrawing::MIMETYPE_PNG);
 
         $imageDrawing = new ImageDrawing($memoryDrawing);
-        $this->assertEquals('test-content', $imageDrawing->getContent());
-        $this->assertEquals('png', $imageDrawing->getExtension());
+        self::assertEquals('test-content', $imageDrawing->getContent());
+        self::assertEquals('png', $imageDrawing->getExtension());
     }
 
     public function testPngExtension()
@@ -32,7 +32,7 @@ class ImageDrawingTest extends TestCase
             ->willReturn(MemoryDrawing::MIMETYPE_PNG);
 
         $imageDrawing = new ImageDrawing($memoryDrawing);
-        $this->assertEquals('png', $imageDrawing->getExtension());
+        self::assertEquals('png', $imageDrawing->getExtension());
     }
 
     public function testJpegExtension()
@@ -43,7 +43,7 @@ class ImageDrawingTest extends TestCase
             ->willReturn(MemoryDrawing::MIMETYPE_JPEG);
 
         $imageDrawing = new ImageDrawing($memoryDrawing);
-        $this->assertEquals('jpg', $imageDrawing->getExtension());
+        self::assertEquals('jpg', $imageDrawing->getExtension());
     }
 
     public function testGifExtension()
@@ -54,7 +54,7 @@ class ImageDrawingTest extends TestCase
             ->willReturn(MemoryDrawing::MIMETYPE_GIF);
 
         $imageDrawing = new ImageDrawing($memoryDrawing);
-        $this->assertEquals('gif', $imageDrawing->getExtension());
+        self::assertEquals('gif', $imageDrawing->getExtension());
     }
 
     public function testCsvExtension()
@@ -66,18 +66,19 @@ class ImageDrawingTest extends TestCase
 
         try {
             new ImageDrawing($memoryDrawing);
-            $this->fail('InvalidImageDrawingException is not throw.');
+            self::fail('InvalidImageDrawingException is not throw.');
         } catch (InvalidImageDrawingException $e) {
-            $this->assertTrue(true);
+            self::assertTrue(true);
         }
     }
+
     public function testFileContent()
     {
         $drawing = $this->createDrawingMock();
 
         $imageDrawing = new ImageDrawing($drawing);
-        $this->assertEquals('test-content', $imageDrawing->getContent());
-        $this->assertEquals('png', $imageDrawing->getExtension());
+        self::assertEquals('test-content', $imageDrawing->getContent());
+        self::assertEquals('png', $imageDrawing->getExtension());
     }
 
     /**
