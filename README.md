@@ -48,5 +48,5 @@ $ php ./bin/separator-excel filename.xlsx
 ### 任意
 -  -o, --output=OUTPUT  
    出力するCSVファイルのパス[初期値: "./export.csv"]
-- -b, --binary=BINARY 　
+- -b, --binary=BINARY  
    画像ファイルを出力するディレクトリのパス [default: "./_output"]
